@@ -1,29 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { BasicCard } from '../components/BasicCard';
-import { TitleCard } from '../components/TitleCard';
-import { HoverableCard } from '../components/HoverableCard';
+import { NextPage } from 'next';
+import LoginJoinPage from '../components/LoginJoin';
 
-function Home() {
-  return (
-    <React.Fragment>
-      <Head>
-        <title>Home - Nextron (with-typescript-emotion)</title>
-      </Head>
-      <div>
-        <TitleCard>Nextron with Emotion</TitleCard>
-        <BasicCard>
-          <Link href="/next">
-            <a>Go to next page</a>
-          </Link>
-        </BasicCard>
-        <HoverableCard>
-          With <code>:hover</code>.
-        </HoverableCard>
-      </div>
-    </React.Fragment>
-  );
+const Home: NextPage = () => {
+    return (
+        <React.Fragment>
+            <Head>
+                <title>Heart-Lab-Chat</title>
+            </Head>
+            <LoginJoinPage />
+        </React.Fragment>
+    );
 };
 
 export default Home;
