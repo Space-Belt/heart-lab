@@ -2,10 +2,11 @@ import React from 'react';
 import '../styles/global.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { LJProvider } from '../context/LoginJoin';
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     return (
-        <React.Fragment>
+        <LJProvider>
             <Head>
                 <meta
                     name="viewport"
@@ -13,8 +14,8 @@ function MyApp({ Component, pageProps }: AppProps) {
                 />
             </Head>
             <Component {...pageProps} />
-        </React.Fragment>
+        </LJProvider>
     );
-}
+};
 
 export default MyApp;
